@@ -111,6 +111,8 @@ public class Robot extends TimedRobot {
     double z = driveController.getRightX()*0.2;   
     m_drive.arcadeDrive(y, -x);
 
+    m_drive.arcadeDrive(driveController.getY(), driveController.getX());
+
 
     m_lb.set(m_rf.get());  
     m_rb.set(m_lf.get());  
@@ -128,7 +130,7 @@ public class Robot extends TimedRobot {
       m_in.set(-0.5);
     }
     else{
-      m_in.set(0.0)  
+      m_in.set(0.0);
     }
   }
 
